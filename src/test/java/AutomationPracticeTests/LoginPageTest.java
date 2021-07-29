@@ -20,7 +20,6 @@ public class LoginPageTest extends Page {
     public static void init() {
     }
 
-
     @Override
     public void open() {
     }
@@ -33,7 +32,6 @@ public class LoginPageTest extends Page {
         homePage.open();
         homePage.goToLoginPage();
         loginPage.fillingTheFields("monika.tester.88@gmail.com", "test123");
-
     }
 
     //logowanie z niestniejącymi danymi
@@ -44,19 +42,15 @@ public class LoginPageTest extends Page {
         homePage.open();
         homePage.goToLoginPage();
         loginPage.fillingTheFields("randomemail@gmail.com", "111");
-
     }
-
 
     @After
     public void after() {
-
         DriverProvider.flush();
-
     }
 
     @AfterClass
     public static void afterClass() {
-
     }
+
 }

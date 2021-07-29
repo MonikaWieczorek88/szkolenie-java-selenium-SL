@@ -90,7 +90,6 @@ public class CartPageTest extends Page {
         cartPage.verifyCartContent2();
     }
 
-
     @After
     public void after() {
         DriverProvider.flush();
@@ -98,6 +97,6 @@ public class CartPageTest extends Page {
 
     @AfterClass
     public static void afterClass() {
-
     }
+
 }

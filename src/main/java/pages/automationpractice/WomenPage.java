@@ -29,9 +29,7 @@ public class WomenPage extends Page {
     private WebElement checkoutButton;
 
 
-
     public WomenPage() {
-
         PageFactory.initElements(driver, this);
     }
 
@@ -62,7 +60,6 @@ public class WomenPage extends Page {
     //przejście do strony koszyka
     public CartPage goToCartPage() {
         checkoutButton.click();
-
         return new CartPage();
     }
 
@@ -70,7 +67,6 @@ public class WomenPage extends Page {
     public CartPage shoppingProcess1Product(){
         addTShirtToCart();
         goToCartPage();
-
         return new CartPage();
     }
 
@@ -80,7 +76,6 @@ public class WomenPage extends Page {
         continueShopping();
         addDressToCart();
         goToCartPage();
-
         return new CartPage();
     }
 }

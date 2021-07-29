@@ -23,14 +23,13 @@ public class LoginPage extends Page {
     private  WebElement errorMessage;
 
 
+    public LoginPage() {
+        PageFactory.initElements(driver, this);
+    }
+
     @Override
     public void open() {
         driver.get(URL);
-    }
-
-    public LoginPage() {
-
-        PageFactory.initElements(driver, this);
     }
 
     //wypełnienie pola 'Email address'
@@ -47,7 +46,6 @@ public class LoginPage extends Page {
 
     //kliknięcie przycisku 'Sign in'
     public void clickSignInButton() {
-
         signInButton.click();
     }
 
@@ -58,6 +56,4 @@ public class LoginPage extends Page {
         clickSignInButton();
     }
 
-
 }
-//gotowe

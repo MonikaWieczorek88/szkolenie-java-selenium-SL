@@ -30,7 +30,6 @@ public class CartPage extends Page {
 
 
     public CartPage() {
-
         PageFactory.initElements(driver, this);
     }
 
@@ -101,16 +100,6 @@ public class CartPage extends Page {
         emptyCart.getAttribute("innerHTML");
         System.out.println(emptyCart.getAttribute("innerHTML"));
     }
-
-
-
-
-
-
-
-
-
-
 
 }
 

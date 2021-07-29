@@ -20,7 +20,6 @@ public class WomenPageTest extends Page {
     public void initEachTest() {
     }
 
-
     @Override
     public void open() {
     }
@@ -52,6 +51,6 @@ public class WomenPageTest extends Page {
 
     @AfterClass
     public static void afterClass() {
-
     }
+
 }

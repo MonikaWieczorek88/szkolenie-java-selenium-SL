@@ -28,19 +28,14 @@ public class HomePage extends Page {
     private WebElement womenTab;
 
 
-
-
     public HomePage() {
-
         PageFactory.initElements(driver, this);
     }
-
 
     @Override
     public void open() {
         driver.get(URL);
     }
-
 
     //przejście do strony logowania
     public LoginPage goToLoginPage() {
