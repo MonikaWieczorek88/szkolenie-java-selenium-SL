@@ -1,9 +1,7 @@
 package AutomationPracticeTests;
 
 import drivers.DriverProvider;
-import net.bytebuddy.implementation.auxiliary.MethodCallProxy;
 import org.junit.*;
-import org.openqa.selenium.By;
 import pages.Page;
 import pages.automationpractice.HomePage;
 import pages.automationpractice.LoginPage;

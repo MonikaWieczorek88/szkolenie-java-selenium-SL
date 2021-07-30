@@ -20,7 +20,7 @@ public class LoginPage extends Page {
     private WebElement signInButton;
 
     @FindBy(xpath = "//*[@id='header']/div[2]/div/div/nav/div[1]/a/span")
-    WebElement userInfo;
+    private WebElement userInfo;
 
     @FindBy(xpath = "//*[@id='center_column']/div[1]/p")
     private WebElement errorMessage;

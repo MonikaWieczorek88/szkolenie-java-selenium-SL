@@ -76,7 +76,7 @@ public class WomenPage extends Page {
         return new CartPage();
     }
 
-    //dodanie dwóch produktów do koszyka u przejście do koszyka
+    //dodanie dwóch produktów do koszyka i przejście na stronę koszyka
     public CartPage shoppingProcess2Products(){
         addTShirtToCart();
         continueShopping();

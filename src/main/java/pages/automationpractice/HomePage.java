@@ -12,18 +12,6 @@ public class HomePage extends Page {
     @FindBy(linkText = "Sign in")
     private WebElement signInButton;
 
-    @FindBy(xpath = "//img[@alt='Faded Short Sleeve T-shirts']")
-    private WebElement tShirt;
-
-    @FindBy(xpath = "//img[@alt='Printed Dress']")
-    private WebElement dress;
-
-    @FindBy(xpath = "//*[@id='homefeatured']/li[1]/div/div[2]/div[2]/a[1]/span")
-    private WebElement addToCartButton;
-
-    @FindBy(xpath = "//*[@id='homefeatured']/li[3]/div/div[2]/div[2]/a[1]/span")
-    private WebElement addToCartButton2;
-
     @FindBy(xpath = "//a[@title='Women']")
     private WebElement womenTab;
 

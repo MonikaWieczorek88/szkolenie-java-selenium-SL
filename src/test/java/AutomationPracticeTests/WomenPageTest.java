@@ -24,7 +24,7 @@ public class WomenPageTest extends Page {
     public void open() {
     }
 
-    //weryfikacja dodania jednego produktu do koszyka i przejście do koszyka
+    //weryfikacja dodania jednego produktu do koszyka i przejścia do koszyka
     @Test
     public void shoppingProcess1Item() {
         homePage = new HomePage();
@@ -34,7 +34,7 @@ public class WomenPageTest extends Page {
         womenPage.shoppingProcess1Product();
     }
 
-    //weryfikacja dodania dwóch produktów do koszyka i przejście do koszyka
+    //weryfikacja dodania dwóch produktów do koszyka i przejścia do koszyka
     @Test
     public void shoppingProcess2Items() {
         homePage = new HomePage();
