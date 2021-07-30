@@ -1,10 +1,16 @@
 package pages.automationpractice;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.Page;
+
+import java.util.concurrent.TimeUnit;
 
 public class WomenPage extends Page {
 
@@ -16,7 +22,7 @@ public class WomenPage extends Page {
     @FindBy(xpath = "//*[@id='center_column']/ul/li[1]/div/div[2]/div[2]/a[1]/span")
     private WebElement addToCartButton1;
 
-    @FindBy(xpath = "//*[@id=layer_cart']/div[1]/div[2]/div[4]/span/span")
+    @FindBy(xpath = "//*[@id='layer_cart']/div[1]/div[2]/div[4]/span")
     private WebElement continueButton;
 
     @FindBy(xpath = "//img[@alt='Printed Dress']")

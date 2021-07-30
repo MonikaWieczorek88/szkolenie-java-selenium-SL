@@ -18,7 +18,7 @@ public class APRemoving1Of2ItemsSteps {
     }
 
     @When("User clicks Women tab and adds one tShirt and one dress to his cart")
-    public void goingToWomenCtg(){
+    public void goingToWomenCtg() throws InterruptedException {
         homePage = new HomePage();
         homePage.open();
         homePage.goToWomenPage();

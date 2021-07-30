@@ -9,7 +9,6 @@ import pages.automationpractice.HomePage;
 import pages.automationpractice.LoginPage;
 
 
-
 public class LoginPageTest extends Page {
 
     HomePage homePage;
@@ -32,6 +31,8 @@ public class LoginPageTest extends Page {
         homePage.open();
         homePage.goToLoginPage();
         loginPage.fillingTheFields("monika.tester.88@gmail.com", "test123");
+        loginPage.userInfo();
+
     }
 
     //logowanie z niestniejącymi danymi
@@ -42,6 +43,7 @@ public class LoginPageTest extends Page {
         homePage.open();
         homePage.goToLoginPage();
         loginPage.fillingTheFields("randomemail@gmail.com", "111");
+        loginPage.errorMessage();
     }
 
     @After

@@ -16,7 +16,7 @@ public class APAddingTwoItemsToCartSteps {
     }
 
     @When("User clicks Women tab and adds tShirt and dress to the cart")
-    public void goToWomenCategory(){
+    public void goToWomenCategory() throws InterruptedException {
         homePage = new HomePage();
         homePage.open();
         homePage.goToWomenPage();

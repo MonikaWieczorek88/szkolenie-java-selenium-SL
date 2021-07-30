@@ -39,7 +39,7 @@ public class CartPageTest extends Page {
 
     //dodanie dwóch produktów do koszyka
     @Test
-    public void cartVerify2Products() {
+    public void cartVerify2Products() throws InterruptedException {
         homePage = new HomePage();
         womenPage = new WomenPage();
         homePage.open();
@@ -66,7 +66,7 @@ public class CartPageTest extends Page {
 
     //usunięcie jednego z dwóch produktów z koszyka
     @Test
-    public void remove1Of2Products() {
+    public void remove1Of2Products() throws InterruptedException {
         homePage = new HomePage();
         womenPage = new WomenPage();
         cartPage = new CartPage();

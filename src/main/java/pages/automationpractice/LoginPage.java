@@ -13,14 +13,17 @@ public class LoginPage extends Page {
     @FindBy(id = "email")
     private WebElement emailInput;
 
-    @FindBy (id = "passwd")
+    @FindBy(id = "passwd")
     private WebElement passwordInput;
 
-    @FindBy (id = "SubmitLogin")
+    @FindBy(id = "SubmitLogin")
     private WebElement signInButton;
 
-    @FindBy (xpath = "\"//*[@id=\\\"center_column\\\"]/div[1]/p\"")
-    private  WebElement errorMessage;
+    @FindBy(xpath = "//*[@id='header']/div[2]/div/div/nav/div[1]/a/span")
+    WebElement userInfo;
+
+    @FindBy(xpath = "//*[@id='center_column']/div[1]/p")
+    private WebElement errorMessage;
 
 
     public LoginPage() {
@@ -54,6 +57,16 @@ public class LoginPage extends Page {
         setEmailInput(email);
         setPasswordInput(password);
         clickSignInButton();
+    }
+
+    //wypisanie komunikatu o zalogowanym użytkowniku
+    public void userInfo(){
+        System.out.println("Logged in user: " + userInfo.getText());
+    }
+
+    //wypisanie komunikatu o błędzie
+    public void errorMessage() {
+        System.out.println(errorMessage.getText());
     }
 
 }
