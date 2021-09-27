@@ -5,6 +5,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import pages.Page;
 
+import java.util.concurrent.TimeUnit;
 
 public class LoginPage extends Page {
 
@@ -28,11 +29,14 @@ public class LoginPage extends Page {
 
     public LoginPage() {
         PageFactory.initElements(driver, this);
+
     }
 
     @Override
     public void open() {
         driver.get(URL);
+
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     //wypełnienie pola 'Email address'
@@ -60,13 +64,15 @@ public class LoginPage extends Page {
     }
 
     //wypisanie komunikatu o zalogowanym użytkowniku
-    public void userInfo(){
-        System.out.println("Logged in user: " + userInfo.getText());
+    public String userInfo(){
+        String loginInfo = userInfo.getText();
+        return loginInfo;
     }
 
     //wypisanie komunikatu o błędzie
-    public void errorMessage() {
-        System.out.println(errorMessage.getText());
+    public String errorMessage() {
+        String errorInfo = errorMessage.getText();
+        return errorInfo;
     }
 
 }

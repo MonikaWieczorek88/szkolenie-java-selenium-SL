@@ -2,55 +2,50 @@ package AutomationPracticeTests;
 
 import drivers.DriverProvider;
 import org.junit.*;
-import pages.Page;
-import pages.automationpractice.HomePage;
 import pages.automationpractice.LoginPage;
 
+public class LoginPageTest {
 
-public class LoginPageTest extends Page {
-
-    HomePage homePage;
-    LoginPage loginPage;
 
 
     @BeforeClass
     public static void init() {
+        System.out.println("Starting all tests from this class ");
     }
 
-    @Override
-    public void open() {
+    @Before
+    public void initEachTest(){
+        System.out.println("Starting particular test from Automation Practice testing suite...");
     }
 
     //logowanie z poprawnymi - istniejącymi danymi (utworzono wcześniej takie konto)
     @Test
-    public void corectLoginTest() {
-        homePage = new HomePage();
-        loginPage = new LoginPage();
-        homePage.open();
-        homePage.goToLoginPage();
-        loginPage.fillingTheFields("monika.tester.88@gmail.com", "test123");
-        loginPage.userInfo();
+    public void correctLoginTest(){
 
+        LoginPage loginPage = new LoginPage();
+        loginPage.open();
+        loginPage.fillingTheFields("monika.tester.88@gmail.com", "test123");
+        Assert.assertEquals("Monika Wieczorek", loginPage.userInfo());
     }
 
     //logowanie z niestniejącymi danymi
     @Test
-    public void failedLoginTest() {
-        homePage = new HomePage();
-        loginPage = new LoginPage();
-        homePage.open();
-        homePage.goToLoginPage();
+    public void failedLogintest(){
+
+        LoginPage loginPage = new LoginPage();
+        loginPage.open();
         loginPage.fillingTheFields("randomemail@gmail.com", "111");
-        loginPage.errorMessage();
+        Assert.assertEquals("There is 1 error", loginPage.errorMessage());
     }
 
     @After
-    public void after() {
+    public void after(){
         DriverProvider.flush();
     }
 
+
     @AfterClass
     public static void afterClass() {
+        System.out.println("All tests finished.");
     }
-
 }
